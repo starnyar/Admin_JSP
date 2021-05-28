@@ -48,4 +48,28 @@ public class BookDAO {
 		return list;
 	}
 	
+	public void insertDB(BookBean bbean)
+	{
+		try {
+			con = DBCon.getCon();
+			String sql = "INSERT INTO ACCOUNT_BOOK('PC_NUM', 'USER_ID', 'START_TIME', 'END_TIME', 'PAYMENT')"
+						 + " VALUES(?,?,?,?,?)";
+			ps.setString(1, bbean.getPc_Num());
+			ps.setString(2, bbean.getUser_Id());
+			ps.setLong(3, bbean.getStart_Time());
+			ps.setLong(4, bbean.getEnd_Time());
+			ps.setLong(5, bbean.getPayment());
+			
+			ps = con.prepareStatement(sql);
+			ps.executeUpdate();
+			
+			
+		} catch (Exception e) {
+			System.out.println("insertDB_Time 오류");
+		} finally {
+			DBCon.close(con, ps, null);
+		}
+
+	}
+	
 }

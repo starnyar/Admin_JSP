@@ -45,8 +45,8 @@
 		</td>
 		<td>
 		<input type = "button" value = "정보 삭제"
-		onclick = "location.href = 'idx_Jsp.jsp?id=
-		<%=abean.getId()%>&idx=deleteUser'">
+		onclick = "location.href = 'idx_Jsp.jsp?id=<%=abean.getId()%>&idx=deleteUser'">
+		</td>
 	</table>
 </body>
 </html>

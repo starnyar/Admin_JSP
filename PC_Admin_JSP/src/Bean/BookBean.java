@@ -7,7 +7,7 @@ public class BookBean {
 	private String ended_Time;
 	private String pc_Num = "1";
 	private String user_Id;
-	private int payment;
+	private long payment;
 	private String user_Name;
 	
 	public BookBean(){}
@@ -61,11 +61,11 @@ public class BookBean {
 		this.user_Id = user_Id;
 	}
 
-	public int getPayment() {
+	public long getPayment() {
 		return payment;
 	}
 
-	public void setPayment(int payment) {
+	public void setPayment(long payment) {
 		this.payment = payment;
 	}
 
