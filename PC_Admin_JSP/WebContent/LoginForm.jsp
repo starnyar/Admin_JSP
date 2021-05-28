@@ -5,8 +5,17 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>LoginForm</title>
+
 </head>
-<body>
+
+<script type="text/javascript">
+ window.history.forward();
+ function noBack(){window.history.forward();}
+</script>
+
+<body onload="noBack();" onpageshow="if(event.persisted) noBack();" onunload="">
+
+
 	<form action = 'login.jsp'>
 		<h2>로그인</h2>
 		<table>

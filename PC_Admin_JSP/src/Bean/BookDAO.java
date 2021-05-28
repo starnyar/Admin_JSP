@@ -58,7 +58,7 @@ public class BookDAO {
 			ps.setString(2, bbean.getUser_Id());
 			ps.setLong(3, bbean.getStart_Time());
 			ps.setLong(4, bbean.getEnd_Time());
-			ps.setLong(5, bbean.getPayment());
+			ps.setInt(5, bbean.getPayment());
 			
 			ps = con.prepareStatement(sql);
 			ps.executeUpdate();
